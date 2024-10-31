@@ -1,6 +1,6 @@
 # views.py
 
-from models import Cliente, Conta
+from models import PessoaFisica, Conta
 
 clientes = []
 contas = []
@@ -21,7 +21,7 @@ def criar_cliente():
         return
 
     endereco = input("Endereço (logradouro, número, bairro, cidade/estado): ")
-    novo_cliente = Cliente(nome, data_nascimento, cpf, endereco)
+    novo_cliente = PessoaFisica(nome, data_nascimento, cpf, endereco)
     clientes.append(novo_cliente)
     print(f"Cliente {nome} criado com sucesso!")
 
